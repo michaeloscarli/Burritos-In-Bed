@@ -28,10 +28,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes); 
 app.use('/users', users);
 
-app.get('/',routes.search);
+app.get('/', function(req, res) {
+  res.render('index',{title: 'Burritos In Bed'})
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
