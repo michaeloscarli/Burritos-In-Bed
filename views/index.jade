@@ -1,0 +1,17 @@
+extends layout
+
+block content
+	div(id="headerDiv")
+		h1(id="mainHeader") Burritos In Bed
+		div(class="container")
+			div(class="row")
+				h2 See who's delivering burritos now!
+				h3 #{stuff}
+				#{data}
+				div(id="searchDiv")
+					form
+						div(class="input-group col-md-12")
+							input(type="text", class="search-query form-control", placeholder="search")
+							span(class="input-group-btn")
+								button(class="btn btn-danger", type="button")
+									span(class="glyphicon glyphicon-search")
